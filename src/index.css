@@ -45,7 +45,7 @@
 
     /* Form elements */
     --border: 220 13% 91%;
-    --input: 220 13% 91%;
+    --input: 0 0% 100%;
     --ring: 217 91% 60%;
 
     /* Gradients */
@@ -127,7 +127,7 @@
 
     /* Form elements */
     --border: 226 26% 20%;
-    --input: 226 26% 15%;
+    --input: 226 26% 12%;
     --ring: 217 91% 65%;
 
     /* Gradients - darker versions */

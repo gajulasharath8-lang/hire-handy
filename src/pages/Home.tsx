@@ -62,7 +62,14 @@ export const Home: React.FC = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-hero py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0">
+          <img 
+            src="/src/assets/hero-workers.jpg" 
+            alt="Professional workers" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-primary/40"></div>
+        </div>
         <div className="relative max-w-7xl mx-auto text-center text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
             Find Trusted
@@ -132,10 +139,20 @@ export const Home: React.FC = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 card-hover cursor-pointer">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="font-semibold text-gray-900 mb-2">{service.name}</h3>
-                <p className="text-sm text-gray-600">{service.workers} workers</p>
+              <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 card-hover cursor-pointer group relative overflow-hidden">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300">
+                  {service.name === 'Electrical' && (
+                    <img src="/src/assets/tech-support.jpg" alt="Tech Support" className="w-full h-full object-cover" />
+                  )}
+                  {service.name === 'Carpentry' && (
+                    <img src="/src/assets/design-services.jpg" alt="Design Services" className="w-full h-full object-cover" />
+                  )}
+                </div>
+                <div className="relative z-10">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="font-semibold text-gray-900 mb-2">{service.name}</h3>
+                  <p className="text-sm text-gray-600">{service.workers} workers</p>
+                </div>
               </Card>
             ))}
           </div>

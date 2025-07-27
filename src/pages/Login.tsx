@@ -149,14 +149,6 @@ export const Login: React.FC = () => {
             </Button>
           </form>
 
-          {/* Test Credentials Info */}
-          <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-            <h4 className="text-sm font-medium text-blue-900 mb-2">Test Credentials:</h4>
-            <div className="text-sm text-blue-800 space-y-1">
-              <p><strong>Customer:</strong> admin / 12345678</p>
-              <p><strong>Worker:</strong> worker / 12345678</p>
-            </div>
-          </div>
 
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">

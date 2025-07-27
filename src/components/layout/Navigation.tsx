@@ -19,6 +19,7 @@ export const Navigation: React.FC = () => {
 
   const navLinks = [
     { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
     { path: '/search', label: 'Find Workers' },
     ...(isAuthenticated ? [
       { path: '/bookings', label: user?.role === 'customer' ? 'My Bookings' : 'Job Requests' },
@@ -109,11 +110,6 @@ export const Navigation: React.FC = () => {
                     Login
                   </Button>
                 </Link>
-                <Link to="/register">
-                  <Button className="btn-primary">
-                    Join Now
-                  </Button>
-                </Link>
               </div>
             )}
           </div>
@@ -189,7 +185,7 @@ export const Navigation: React.FC = () => {
                     className="block px-3 py-2 text-primary hover:bg-primary/5 rounded-md font-medium"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Join Now
+                    Register
                   </Link>
                 </div>
               )}
